@@ -1,9 +1,7 @@
 import model.Actor;
 import model.Movie;
-import service.ActorService;
-import service.CastService;
-import service.GenreService;
-import service.MovieService;
+import model.MovieGenre;
+import service.*;
 
 import java.sql.*;
 import java.util.List;
@@ -35,6 +33,10 @@ public class Main {
         String genre2 = "Drama";
         System.out.println(genreService.findByName(genre2) == null ? "Bu film türünde kayıt bulunmamaktadır" : genreService.findByName(genre2).getName());
 
+        MovieGenreService movieGenreService = new MovieGenreService();
+        for (MovieGenre movieGenre : movieGenreService.findByMGenreId(1)) {
+            System.out.println(movieGenre.getMovieId());
+        }
 
     }
 }

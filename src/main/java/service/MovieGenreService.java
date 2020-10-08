@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class MovieGenreService extends DatabaseService<MovieGenre> {
-    protected MovieGenreService() throws SQLException {
+    public MovieGenreService() throws SQLException {
         super();
     }
 
