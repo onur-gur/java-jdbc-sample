@@ -34,7 +34,7 @@ public class Main {
         System.out.println(genreService.findByName(genre2) == null ? "Bu film türünde kayıt bulunmamaktadır" : genreService.findByName(genre2).getName());
 
         MovieGenreService movieGenreService = new MovieGenreService();
-        
+
         for (MovieGenre movieGenre : movieGenreService.findByMGenreId(1)) {
             System.out.println(movieGenre.getMovieId());
         }
